@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+    --accent: #ff7f50;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+form {
+    background: #f4f4f4;
+    padding: 50px 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    letter-spacing: 0.05em;
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-bottom: 35px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 12px 10px;
+    background: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    transition: 0.3s;
+    text-transform: none;
+    color: #333;
+}
+
+.inputBox input:focus {
+    border-color: var(--accent);
+    background: #fffaf5;
+}
+
+.inputBox label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: #777;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: #f4f4f4;
+    padding: 0 4px;
+    font-size: 0.9em;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+    top: -10px;
+    font-size: 0.75em;
+    color: var(--accent);
+}
+
+.inputBox input[type="submit"] {
+    background: var(--accent);
+    color: #fff;
+    font-size: 1em;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.inputBox input[type="submit"]:hover {
+    background: #ff5722;
+    letter-spacing: 0.1em;
+}
+
+form p {
+    color: #555;
+    margin-top: 20px;
+    font-size: 0.95em;
+}
+
+form p a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
